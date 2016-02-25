@@ -20,7 +20,7 @@ public class MIPSsimulator {
     }
     System.out.println("------------------------");
     System.out.println("ChrisTopher C. Thomas");
-    System.out.println("Program3: MIPS simulator");
+    System.out.println("Program 3: MIPS simulator");
     boolean debug=false;
     if(args[0].equals("-d")) {debug=true;System.out.println("Mode: Debug");}
     else if(args[0].equals("-n")) {debug=false;System.out.println("Mode: Normal");}
@@ -95,14 +95,6 @@ class MIPSsim {
 
     fetchFile();
 
-    /* Remember Your Failure!!!
-    for (int i=0;i<mainMemorySize;i++) {
-      if(MEM[i]!=0) {
-        if(debugMode) {debugContinue();}
-        mipsInstructions(MEM[(int)(PC/4)]);
-      }
-    }
-    */
     while (true) {
       if(debugModeMaster) {debugContinue();}
       //System.out.printf("%x%n", PC);
@@ -197,8 +189,7 @@ class MIPSsim {
     System.out.println("Input File");
     System.out.print("%");
     String inputString = scan.nextLine();
-    inputString = checkEasterEggs(inputString);
-    File file = new File("../TextFiles/" + inputString + ".txt");
+    File file = new File("../mips_text_files/" + inputString + ".txt");
     this.file=file;
     readFile();
   }
